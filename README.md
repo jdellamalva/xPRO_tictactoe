@@ -10,6 +10,9 @@ This project is a command-line tic-tac-toe game implemented in [programming lang
 
 1. Clean up and modernize UI
 2. Add functionality to reset the game once it ends.
+
+To achieve this I'd probably use something like useEffect to listen to changes to the status variable and throw an alert when the game is over. This would also reset the game state to an empty array, which would trigger a re-render of the Board component since gameState is using React's useState.
+
 3. Play a confetti animation using CSS when a winner is declared.
 4. Fix winner/loser logic so that the game can't be continued but must instead be reset after a win/loss/draw event.
 
